@@ -7,14 +7,7 @@ pipeline {
     }
 
     stages {
-
-        stage('Checkout') {
-            steps {
-                git url: 'https://github.com/elmogyy/flask-notes-cicd.git',
-                    branch: 'main'
-            }
-        }
-
+        
         stage('Build Image') {
             steps {
                 sh '''
